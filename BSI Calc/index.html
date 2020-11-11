@@ -131,22 +131,16 @@
                An industrial machine compresses natural gas into an interstate gas pipeline.  The compressor is on line 24 hours a day.  (If the machine is down, a gas field has to be shut down until the natural gas can be compressed, so down time is very expensive.)  The vendor knows that the compressor has a constant failure rate of 0.000001 failures/hr. What is the operational reliability after 2500 hours of continuous service?<br>
                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
                 
-                Reliability = e^-(0.000001 * 2500) = 0.9975
+                Reliability = e^-(0.000001 * 2500) = 0.9975<br>
                 <br>
                 <br>
-                    <form id="zad4form">
-                    <label for="x">failures/hr:</label>
-                        <br>
-                    <input type="number" id="x" step="any"name="failureRate">
-                        <br>
-                        <br>
-                    <label for="t">hours of continuous service:</label>
-                        <br>
-                    <input type="number" id="t" name="time">
-                        <br>
-                        <br>
-                    <input type="button" name="result"  value="Oblicz" onclick="zad4()">
-                </form>
+               
+                Failures per hour : <input type="number" id="number9"><br><br>
+                Hours of continuous service : <input type="number" id="number10"><br><br>
+                
+                <button onclick="zad4();">Calculate</button><br>
+                <div id="wynik4"></div>
+               
              </div>
             </div>  
             
@@ -157,22 +151,17 @@
                 During World War II, the failure rate for bomber aircraft flying over Europe was believed to be a 4% chance of non-return from each mission, however experienced the pilot was.  Calculate the probability that a crew member will survive 25 missions.<br>
                  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
                  
-                The probability of surviving 10 missions is (1-0.04)^25 = 0.96^25 = 0.36.
+                The probability of surviving 10 missions is (1-0.04)^25 = 0.96^25 = 0.36.<br>
                 <br>
                 <br>
-                    <form id="zad5form">
-                        <label for="a">failure rate:</label>
-                            <br>
-                        <input type="number" id="a" step="any" name="failureRate" max="100">%
-                            <br>
-                            <br>
-                        <label for="b">number of missions:</label>
-                            <br>
-                        <input type="number" id="b" name="missions">
-                            <br>
-                            <br>
-                        <input type="button" id="result2" name="result2"  value="Oblicz" onclick="zad5()">
-                    </form>
+                 
+                Failure rate : <input type="number" id="number11"><br><br>
+                Number of missions : <input type="number" id="number12"><br><br>
+                
+                
+                <button onclick="zad5();">Calculate</button><br>
+                <div id="wynik5"></div>
+
             </div>
             </div>
             </div>

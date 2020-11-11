@@ -1,9 +1,13 @@
 function zad4(){
-    var x = document.getElementById('x').value;
-    var t = document.getElementById('t').value;   
+    var wynik = document.getElementById("wynik4");
+    
+    var x = document.getElementById('number9').value;
+    var t = document.getElementById('number10').value;   
     myResult = Math.exp(-(x*t));
-    var zad5form = document.getElementById("zad4form");
     var z = document.createTextNode("Reliability: "+myResult.toFixed(4)*100+"%");
-    zad4form.appendChild(document.createElement("br"));
-    zad4form.appendChild(z);
+    wynik.appendChild(z);
+    wynik.appendChild(document.createElement("br"));
+    var spacer = document.createTextNode("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+    wynik.appendChild(spacer);
+    wynik.appendChild(document.createElement("br"));
 }

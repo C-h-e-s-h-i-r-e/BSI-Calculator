@@ -1,9 +1,14 @@
 function zad5(){
-    var a = document.getElementById('a').value;
-    var b = document.getElementById('b').value;   
+    var wynik = document.getElementById("wynik5");
+    
+    var a = document.getElementById('number11').value;
+    var b = document.getElementById('number12').value;   
     var myResult2 =Math.pow((1-a/100), b);
-    var zad5form = document.getElementById("zad5form");
+    
     var w = document.createTextNode("Probability: "+myResult2.toFixed(2)*100+"%");
-    zad5form.appendChild(document.createElement("br"));
-    zad5form.appendChild(w);
+    wynik.appendChild(w);
+    wynik.appendChild(document.createElement("br"));
+    var spacer = document.createTextNode("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+    wynik.appendChild(spacer);
+    wynik.appendChild(document.createElement("br"));
 }
