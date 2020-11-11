@@ -19,6 +19,12 @@ div {
     background-color: white;
     opacity: 0.8;
     padding : 25px;
+    line-height: 25px;
+}
+
+input {
+	/* Other statements removed for brevity */
+	line-height: 17px;
 }
 
 main {

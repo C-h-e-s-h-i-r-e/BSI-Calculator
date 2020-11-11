@@ -7,8 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      
-
+    
     <link rel="stylesheet" href="style.css">
       
     <title>BSI Calculator</title>
@@ -28,37 +27,110 @@
             <div id="d1" class="row justify-content-center">
       <a class="btn btn-primary" href="/" role="button" onClick="op('z1'); return false;">Zadanie 1</a>
             <div class="zad1" id="z1" style="display:none">
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
+                California Instruments, Inc., produces 3,000 computer chips per day. Three hundred are tested for a period of 500 operating hours each. During the test, six failed: two after 50 hours, two at 100 hours, one at 300 hours, and one at 400 hours.<br>
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
+                
+                FR(%) = failures per number tested = 6/300 = 0.02 = 2%<br>
 
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                FR(N) = failures per operating time:<br>
 
+                Total time = 300 * 500 = 150,000 hours<br>
+
+                Downtime = 2(450) + 2(400) + 1(200) + 1(100) = 2,000 hours<br>
+
+                Operating time = Total time – Downtime = 150,000 – 2,000 = 148,000<br>
+
+                Therefore: FR(N) = 6/148,000 = 0.0000405 failures/hour<br>
+                
+                <br><br>
+                
+                Produced computer chips per day : <input type="number" id="number1"><br><br>
+                Tested chips : <input type="number" id="number2"><br><br>
+                Period of tested operating hours : <input type="number" id="number3"><br><br>
+                Failed chips:
+                    
+                    <form id="form" action="">
+                    </form>
+                    <button id="btn" type="button">Add more Input</button>
+                <br><br>
+                
+                <button onclick="zad1();">Calculate</button><br>
+                <div id="wynik1"></div>
+                
             </div>
             </div>
       
             <div class="row justify-content-center">
       <a class="btn btn-primary" href="/" role="button" onClick="op('z2'); return false;">Zadanie 2</a>
             <div class="zad2" id="z2" style="display:none">
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
+                If 300 of chips with 0.0000405 failures/hour are used in building a mainframe computer, how many failures of the computer can be expected per month?<br>
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
 
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                Converting the units of FR(N) to months : <br>
 
+                FR(N) = 0.0000405 * 24 hours/day * 30 days/month = 0.029 failures/month<br>
+
+                FR(N) for the 300 units:<br>
+
+                FR(N) = 0.029 failures/month * 300 units = 8.75 failures/month<br>
+                                                                                                                                                                    
+                MTBF for the mainframe:<br>
+
+                MTBF = 1/FR(N) = 1/8.75 = 0.11 month = 0.11 * 30 = 3.4 days<br>
+                
+                Calculation for MTBF assumes that failure of any one chip brings down entire system.<br>
+                
+                <br><br>
+                
+                Number of chips : <input type="number" id="number4"><br><br>
+                Failures/hour ratio : <input type="number" id="number5"><br><br>
+                
+                <button onclick="zad2();">Calculate</button><br>
+                <div id="wynik2"></div>
+                
             </div>
             </div>
       
             <div class="row justify-content-center">
       <a class="btn btn-primary" href="/" role="button" onClick="op('z3'); return false;">Zadanie 3</a>
             <div class="zad3" id="z3" style="display:none">
-
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
+                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
+                Two football teams are due to play each other three times in the next few weeks. The data from  their  matches  in  the  past  suggests  that  the  probability  of  Team  A  winning  is  50%,  and  the probability of Team B winning is 30%<br><br>
+                
+                a) What is the probability of a draw in the first match?<br><br>
+                
+                b) Assuming  that  the  results  of  the  three  matches  are statistically  independent  what  is  the probability of Team B winning all three matches?<br><br>
+                
+                c) Assuming  that  the  results  of  the  three  matches  are statistically  independent  what  is  the probability of Team B winning at least one of the matches?<br>
+                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
+                
+                a)The probability of a draw is 20% because 50%+30%+20%=100%.<br><br>
+                
+                b) P(B winning three matches)=P(B wins 1st)*P(B wins 2nd)*P(B wins 3rd) = 30% * 30% * 30% = 27/1000 = 0.027 = 2.7%<br><br>
+                
+                c) The probability of  Team B  failing to win each match is 70%  (100%-30%),  so the  probability of failing to win all three matches is  70% * 70% * 70% = 7/10 * 7/10 *7/10 = 343/1000 = 34.3%<br> Probability is P(B wins at least one match) = 100% - 34.3% = 65.7%<br>
+                
+                <br><br>
+                
+                Number of maches : <input type="number" id="number6"><br><br>
+                Probability  of  Team  A  winning : <input type="number" id="number7"><br><br>
+                Probability  of  Team  B  winning : <input type="number" id="number8"><br><br>
+                
+                <button onclick="zad3();">Calculate</button><br>
+                <div id="wynik3"></div>
+                
             </div>
             </div>
                 
             <div class="row justify-content-center">
       <a class="btn btn-primary" href="/" role="button" onClick="op('z4'); return false;">Zadanie 4</a>
-            <div class="zad4" id="z4" style="display:none">
-                "An industrial machine compresses natural gas into an interstate gas pipeline.  The compressor is on line 24 hours a day.  (If the machine is down, a gas field has to be shut down until the natural gas can be compressed, so down time is very expensive.)  The vendor 
-                Introduction to reliability (Portsmouth Business School, April 2012) 7 knows that the compressor has a constant failure rate of 0.000001 failures/hr. What is the operational reliability after 2500 hours of continuous service? "
-                <br>
-                <br>
+           <div class="zad4" id="z4" style="display:none">
+               - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br> 
+               An industrial machine compresses natural gas into an interstate gas pipeline.  The compressor is on line 24 hours a day.  (If the machine is down, a gas field has to be shut down until the natural gas can be compressed, so down time is very expensive.)  The vendor knows that the compressor has a constant failure rate of 0.000001 failures/hr. What is the operational reliability after 2500 hours of continuous service?<br>
+               - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
+                
                 Reliability = e^-(0.000001 * 2500) = 0.9975
                 <br>
                 <br>
@@ -80,11 +152,11 @@
             
             <div id="d5" class="row justify-content-center">
         <a class="btn btn-primary" href="/" role="button" onClick="op('z5'); return false;">Zadanie 5</a>
-            <div class="zad5" id="z5" style="display:none">
-      
-                "During World War II, the failure rate for bomber aircraft flying over Europe was believed to be a 4% chance of non-return from each mission, however experienced the pilot was.  Calculate the probability that a crew member will survive 25 missions."
-                <br>
-                <br>
+             <div class="zad5" id="z5" style="display:none">
+                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
+                During World War II, the failure rate for bomber aircraft flying over Europe was believed to be a 4% chance of non-return from each mission, however experienced the pilot was.  Calculate the probability that a crew member will survive 25 missions.<br>
+                 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
+                 
                 The probability of surviving 10 missions is (1-0.04)^25 = 0.96^25 = 0.36.
                 <br>
                 <br>
@@ -115,7 +187,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
     <script src="script.js"></script>
+    <script src="zadanie1.js"></script>
+    <script src="zadanie2.js"></script>
+    <script src="zadanie3.js"></script>
     <script src="zadanie4.js"></script>
     <script src="zadanie5.js"></script>
     
