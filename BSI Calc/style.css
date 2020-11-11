@@ -1,0 +1,27 @@
+body {
+    background-color: white;
+    text-align: center;
+    padding : 25px;
+}
+
+#d1 {
+    padding-top: 20px;
+}
+#d5 {
+    padding-bottom: 20px;
+}
+
+div {
+    margin: 20px;
+}
+
+#z1, #z2, #z3, #z4, #z5 {
+    background-color: white;
+    opacity: 0.8;
+    padding : 25px;
+}
+
+main {
+    background-color: black;
+    opacity: 0.8;
+}
