@@ -3,6 +3,11 @@ body {
     text-align: center;
     padding : 25px;
 }
+main{
+    border-radius: 25px;
+    background-color: black;
+    opacity: 0.8;
+}
 
 #d1 {
     padding-top: 20px;
@@ -12,6 +17,7 @@ body {
 }
 
 div {
+    border-radius: 25px;
     margin: 20px;
 }
 
@@ -27,7 +33,18 @@ input {
 	line-height: 17px;
 }
 
-main {
-    background-color: black;
-    opacity: 0.8;
+header {
+    border-radius: 25px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+footer {
+    border-radius: 25px;
+    background-color:dodgerblue;
+    color: white;
+    text-align: center;
+    position:fixed;
+    bottom:0;
+    width: 100%;
 }
