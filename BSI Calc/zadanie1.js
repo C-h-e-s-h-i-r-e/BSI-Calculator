@@ -6,7 +6,7 @@
     counter++;
     var input = document.createElement("input");
     input.id = 'input-' + counter;
-    input.type = 'text';
+    input.type = 'number';
     input.name = 'name';   
     form.appendChild(input);
     
@@ -16,7 +16,7 @@
     counter++;
     var input2 = document.createElement("input");
     input2.id = 'input-' + counter;
-    input2.type = 'text';
+    input2.type = 'number';
     input2.name = 'name';    
     form.appendChild(input2); 
   
