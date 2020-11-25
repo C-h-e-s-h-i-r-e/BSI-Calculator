@@ -7,8 +7,8 @@ function MFTB(){
     var Number_of_Chips = document.getElementById('number4').value;
     var n2 = document.getElementById('number5').value;
     
-    var FE_for_1 = (n2*24*30).toFixed(3);
-    var FE_for_All = (FE_for_1*Number_of_Chips).toFixed(2);
+    var FR_for_1 = (n2*24*30).toFixed(3);
+    var FR_for_All = (FE_for_1*Number_of_Chips).toFixed(2);
     var MTBF = (1/FE_for_All).toFixed(2);
     
     var line1 = document.createTextNode("Converting the units of FR(N) to months :");
