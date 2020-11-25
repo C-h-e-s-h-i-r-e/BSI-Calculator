@@ -39,7 +39,7 @@ function Probability(){
     Result.appendChild(line2);
     Result.appendChild(document.createElement("br"));
     
-    var line3 = document.createTextNode("c) Probability of team B winning at least one match is "+TeamB_Wins_One+"%");
+    var line3 = document.createTextNode("c) Probability of team B winning at least one match is "+(100-TeamB_Wins_One)+"%");
     Result.appendChild(line3);
     Result.appendChild(document.createElement("br"));
     

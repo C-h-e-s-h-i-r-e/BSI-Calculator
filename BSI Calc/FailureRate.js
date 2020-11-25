@@ -74,10 +74,10 @@ function FR(){
          Down_Time += x*(Operating_Hours-y);
         }
     
-    var FR_Percent = (sumoferrors/Tested_Chips).toFixed(3);
+    var FR_Percent = (sumoferrors/Tested_Chips);
     var Total_time = Tested_Chips*Operating_Hours;
     var Operating_Time = Total_time-Down_Time;
-    var FR_Time = (sumoferrors/Operating_Time).toFixed(3); 
+    var FR_Time = (sumoferrors/Operating_Time); 
     
     var flag1 = true;
     var flag2 = true;
@@ -116,7 +116,7 @@ function FR(){
     
    if(flag1 && flag2 && flag3){
     
-    var line1 = document.createTextNode("FR(%) = failures per number tested = "+sumoferrors+"/"+Tested_Chips+" = "+FR_Percent+" = "+(FR_Percent*100).toFixed(3)+"%");
+    var line1 = document.createTextNode("FR(%) = failures per number tested = "+sumoferrors+"/"+Tested_Chips+" = "+FR_Percent+" = "+(FR_Percent*100)+"%");
     Result.appendChild(line1);
     Result.appendChild(document.createElement("br"));
     

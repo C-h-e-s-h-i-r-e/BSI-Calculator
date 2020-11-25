@@ -31,7 +31,7 @@ function MFTB(){
     Result.appendChild(line5);
     Result.appendChild(document.createElement("br"));
     
-    var line6 = document.createTextNode("MTBF = 1/FR(N) = 1/"+FE_for_All+" = "+MTBF+" month = "+MTBF+" * 30 = "+(MTBF*30).toFixed(3)+" days");
+    var line6 = document.createTextNode("MTBF = 1/FR(N) = 1/"+FE_for_All+" = "+MTBF+" month = "+MTBF+" * 30 = "+(MTBF*30)+" days");
     Result.appendChild(line6);
     Result.appendChild(document.createElement("br"));
 
